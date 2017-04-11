@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mario</title>
+
+    <!-- 用引入文件的方式 -->
+    <style type="text/css">
+        .gamediv{
+            width:500px;
+            height:400px;
+            background-color:pink;
+            border:1px solid green;
+            margin:0px auto;
+            position:relative;
+        }
+        .controlcenter{
+            width:150px;
+            height:100px;
+            margin:0px auto;
+            margin-top:20px;
+        }
+
+    </style>
+
+    <script>
+        <!--
+        function Mario(){
+            this.x=0;
+            this.y=0;
+
+            //移动 0->上 1->右 2->下 3->左
+            this.move=function(direct){
+                switch(direct){
+                    case 0:
+                        var mymario=document.getElementById('mymario');
+                        var top=mymario.style.top;
+                        top=parseInt(top.substr(0,top.length-2));
+                        if(top==0){
+                            window.alert("error!");
+                            break;
+                        }
+                        else{
+                            /*window.alert(top);*/
+                            mymario.style.top=(top-10)+"px";
+                            break;
+                      }
+                    case 1:
+                        //得到img元素
+                        var mymario=document.getElementById('mymario');
+                        var left=mymario.style.left;//得到的left是一个串
+                        //把px这个单位去掉
+                        left=parseInt(left.substr(0,left.length-2));
+                        if(left==440){
+                            window.alert("error!");
+                            break;
+                        }
+                        else{
+                           /* window.alert(left);*/
+                            mymario.style.left=(left+20)+"px";
+                            break;
+                      }
+                    case 2:
+                        var mymario=document.getElementById('mymario');
+                        var top=mymario.style.top;
+                        top=parseInt(top.substr(0,top.length-2));
+                        if(top==340){
+                            window.alert("error!");
+                            break;
+                        }
+                        else{
+                           /* window.alert(top);*/
+                            mymario.style.top=(top+10)+"px";
+                            break;
+                      }
+                    case 3:
+                        var mymario=document.getElementById('mymario');
+                        var left=mymario.style.left;
+                        left=parseInt(left.substr(0,left.length-2));
+                        if(left==0){
+                            window.alert("error!");
+                            break;
+                        }
+                        else{
+                            mymario.style.left=(left-20)+"px";
+                            break;
+                      }
+                }
+            }
+        }
+
+        //创建Mario对象
+        var mario=new Mario();
+        //全局函数
+        function marioMove(direct){
+            switch(direct){
+                case 0:
+                     mario.move(direct);
+                    break;
+                case 1:
+                    mario.move(direct);
+                    break;
+                case 2:
+                     mario.move(direct);
+                    break;
+                case 3:
+                     mario.move(direct);
+                    break;
+            }
+        }
+        //-->
+    </script>
+</head>
+<body>
+    <div class="gamediv">
+        <img id="mymario" src="mario.png" style="width:50px;
+            position:absolute;top:0px;left:0px;"/>
+    </div>
+
+    <table class="controlcenter" border="1px;">
+        <tr>
+            <td colspan="3">游戏键盘</td>
+        </tr>
+        <tr>
+            <td>**</td>
+            <td><input type="button" value="向上" onclick="marioMove(0)"></td>
+            <td>**</td>
+        </tr>
+        <tr>
+            <td><input type="button" value="向左" onclick="marioMove(3)"></td>
+            <td></td>
+            <td><input type="button" value="向右" onclick="marioMove(1)"></td>
+        </tr>
+        <tr>
+            <td>**</td>
+            <td><input type="button" value="向下" onclick="marioMove(2)"></td>
+            <td>**</td>
+        </tr>
+    </table>
+</body>
+</html>
