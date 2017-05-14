@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        ul{
+            width: 800px;
+            height: 500px;
+            border: 1px solid #000;
+            margin:0 auto;
+
+            perspective:500px;
+        }
+        ul li{
+            list-style:none;
+            width: 200px;;
+            height: 200px;
+            margin:0 auto;
+            margin-top: 50px;
+            border: 1px solid #000;
+        }
+        ul li img{
+            width: 200px;
+            height: 200px;
+
+        }
+        ul li:nth-child(1){
+            /*默认情况下所有元素都是围绕Z轴进行旋转*/
+            transform:rotateZ(45deg);
+        }
+        ul li:nth-child(2) img{
+                transform:rotateX(45deg);
+        }
+        ul li:nth-child(3) img{
+            transform:rotateY(45deg);
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li><img src="rotateZ.jpg" alt=""></li>
+    <li><img src="rotateX.jpg" alt=""></li>
+    <li><img src="rotateY.jpg" alt=""></li>
+</ul>
+</body>
+</html>
