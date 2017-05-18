@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        div{
+            width: 600px;
+            height: 188px;
+            border: 1px solid #000;
+            margin:100px auto;
+            overflow: hidden;
+        }
+        ul{
+            width: 2000px;
+            height: 188px;
+            animation: move 10s infinite normal;
+        }
+        @keyframes move {
+            from{
+                margin-left: 0;
+            }
+            to{
+                margin-left:-1200px;
+            }
+        }
+        ul li{
+            float: left;
+            list-style: none;
+            width: 300px;
+            height: 188px;
+            background-color: red;
+            border: 1px solid #000;
+            box-sizing: border-box;
+        }
+        ul li:first-of-type img{
+            width: 300px;
+            height: 188px;
+        }
+        ul li:nth-child(5) img{
+            width: 300px;
+            height: 188px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <ul>
+        <li><img src="images/banner1.png" alt=""></li>
+        <li><img src="images/banner2.jpg" alt=""></li>
+        <li><img src="images/banner3.jpg" alt=""></li>
+        <li><img src="images/banner4.jpg" alt=""></li>
+        <li><img src="images/banner1.png" alt=""></li>
+        <li><img src="images/banner2.jpg" alt=""></li>
+    </ul>
+</div>
+
+</body>
+</html>
