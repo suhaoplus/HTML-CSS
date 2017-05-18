@@ -21,7 +21,17 @@
         ul{
             width: 2000px;
             height: 188px;
+            background-color: black;
             animation: move 10s infinite normal;
+        }
+        ul:hover{
+            animation-play-state: paused;
+        }
+        ul:hover li{
+            opacity: 0.5;
+        }
+        ul li:hover{
+            opacity:1;
         }
         @keyframes move {
             from{
