@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        ul{
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000;
+            box-sizing: border-box;
+            margin:100px;
+            position: relative;
+            transform: rotateY(0deg) rotateX(0deg);
+            transform-style: preserve-3d;
+        }
+        ul li{
+            width: 200px;
+            height: 200px;
+            list-style: none;
+            font-size:60px;
+            text-align: center;
+            line-height: 200px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        /*这是有规律的*/
+        ul li:nth-child(1){
+            background-color: red;
+            transform:rotateX(90deg) translateZ(100px);
+        }
+        ul li:nth-child(2){
+            background-color: green;
+            transform:rotateX(180deg) translateZ(100px);
+        }
+        ul li:nth-child(3){
+            background-color: blue;
+            transform:rotateX(270deg) translateZ(100px);
+        }
+        ul li:nth-child(4){
+            background-color: yellow;
+            transform:rotateX(360deg) translateZ(100px);
+        }
+        ul li:nth-child(5){
+            background-color: purple;
+            transform:rotateY(90deg) translateZ(-100px);
+        }
+        ul li:nth-child(6){
+            background-color: pink;
+            transform:rotateY(180deg) translateZ(100px);
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+</ul>
+</body>
+</html>
